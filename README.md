@@ -41,3 +41,17 @@ In the pipeline
 - Get other users feeds
 - Improve request() boilerplate disaster
 
+License
+-------
+
+MIT
+
+Disclaimer
+----------
+
+I am not employed by Vine.co, nor have they blessed this project. 
+
+Warranty
+--------
+
+Absolutely none
