@@ -4,7 +4,7 @@ var VINO_DEFAULT_OPTS = {
 	debug: 1,
 	deviceToken: 'Vino',
 	userAgent: 'com.vine.iphone/1.01 (unknown, iPhone OS 6.0, iPad, Scale/2.000000) (Vino.js/'+VINO_VERSION+')'
-}
+};
 
 // use browser-request if available, fall back to npm request
 if (typeof request == 'undefined') {
@@ -20,10 +20,10 @@ function Vino(options) {
 Vino.prototype.debug = function(args) {
 	if (this.opts.debug)
 		console.log('vino', arguments);
-}
+};
 
 Vino.prototype.homeFeed = function(callback) {
-	if (!'sessionId' in this) 
+	if (!('sessionId' in this))
 		throw new Error('must be logged in');
 	var bu = this.opts.baseUrl, that = this;
 	request(
@@ -48,11 +48,11 @@ Vino.prototype.homeFeed = function(callback) {
 			callback(null, body.data);
 		}
 	);
-}
+};
 
 Vino.prototype.login = function(callback) {
-	if (!'username' in this.opts ||
-			!'password' in this.opts)
+	if (!('username' in this.opts) ||
+			!('password' in this.opts))
 		throw new Error('username and password required to login');
 	var bu = this.opts.baseUrl, that = this;
 	request(
@@ -62,11 +62,11 @@ Vino.prototype.login = function(callback) {
 			form: { 
 				username: this.opts.username,
 				deviceToken: this.opts.deviceToken,
-				password: this.opts.password,
+				password: this.opts.password
 			},
 			headers: {
 				'User-Agent': this.opts.userAgent
-			}, 
+			}
 		},
 		function (err, resp, body) {
 			that.debug('login response', err, resp, body);
@@ -84,21 +84,21 @@ Vino.prototype.login = function(callback) {
 			callback(null, that.sessionId, that.userId, that);
 		}
 	);
-}
+};
 
 
 function extend(target) {
 	for (var i = 1; i < arguments.length; i++) {
 		var source = arguments[i],
-		keys = Object.keys(source)
+		keys = Object.keys(source);
 
 		for (var j = 0; j < keys.length; j++) {
-			var name = keys[j]
-			target[name] = source[name]
+			var name = keys[j];
+			target[name] = source[name];
 		}
 	}
 
-	return target
+	return target;
 }
 
 module.exports = Vino;
