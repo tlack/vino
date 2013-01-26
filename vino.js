@@ -101,4 +101,7 @@ function extend(target) {
 	return target;
 }
 
-module.exports = Vino;
+if (typeof module == 'undefined') 
+	window.Vino = Vino;
+else 
+	module.exports = Vino;
