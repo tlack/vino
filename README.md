@@ -44,7 +44,8 @@ In the pipeline
 License
 -------
 
-MIT
+(C) Copyright 2013 Thomas Lackner <lackner@gmail.com> 
+MIT license
 
 Disclaimer
 ----------
