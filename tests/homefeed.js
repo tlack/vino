@@ -1,7 +1,7 @@
 var vino = require('../vino.js'), client;
 
 if (process.argv.length != 4) {
-	console.error('usage: node login.js [username] [password]');
+	console.error('usage: node homefeed.js [username] [password]');
 	process.exit(1);
 }
 
