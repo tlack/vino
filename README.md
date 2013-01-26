@@ -2,7 +2,7 @@ Vino
 ====
 
 Vino is a Vine.co API client written in JavaScript. It is targeted toward
-Node.js, but should be usable via the browser notwithstanding CORS issues.
+Node.js, but should be usable via the browser, CORS issues notwithstanding.
 
 Features
 --------
