@@ -41,6 +41,19 @@ In the pipeline
 - Get other users feeds
 - Improve request() boilerplate disaster
 
+Random Vine API notes
+---------------------
+
+Here's some random stuff I've sussed out with Fiddler2.
+
+- The user profile endpoints (/users/profiles/[SuperLongUserIdInt]) returns the users phone number. I find that strange. Perhaps it's
+  useful for finding people to follow using your contacts, but even so I feel that functionality should be server side.
+
+- There's a "secret" web interface for the Explore pane that can be accessed
+	without login via your web browser: http://vine.co/explore . I'm a bit
+	puzzled about what this is needed for or why they implemented the system this
+	way. Alas, all the links are using proprietary in-app URIs
+
 License
 -------
 
