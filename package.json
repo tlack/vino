@@ -1,0 +1,9 @@
+{
+	"name": "Vino",
+	"version": "0.0",
+	"author": "Thomas Lackner <lackner@gmail.com>",
+	"description": "Vine.co API client",
+	"dependencies": {
+		"request": "*"
+	}
+}
