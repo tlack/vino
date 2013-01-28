@@ -53,10 +53,11 @@ Here's some random stuff I've sussed out with Fiddler2.
   with some headers to check cache expiration. What is this URL used for? To alert users
 	when the service is down? 
 
-- The user profile endpoints (/users/profiles/[SuperLongUserIdInt]) returns the
+- (Updated) The user profile endpoints (/users/profiles/[SuperLongUserIdInt]) returns the
 	users phone number. I find that strange. Perhaps it's useful for finding
 	people to follow using your contacts, but even so I feel that functionality
-	should be server side.
+	should be server side. Update: This no longer occurs. The phoneNumber field still
+	appears for some users, but its value is null.
 
 - There's a "secret" web interface for the Explore pane that can be accessed
 	without login via your web browser: http://vine.co/explore . I'm a bit
