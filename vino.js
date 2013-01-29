@@ -86,6 +86,33 @@ Vino.prototype.login = function(callback) {
 	);
 };
 
+Vino.prototype.tagSearch = function(tag, callback) {
+	if (!('sessionId' in this))
+		throw new Error('must be logged in');
+	var bu = this.opts.baseUrl, that = this;
+	request(
+		{
+			url: bu+'timelines/tags/'+encodeURIComponent(tag),
+			method: 'get',
+			headers: {
+				'vine-session-id': this.sessionId,
+				'User-Agent': this.opts.userAgent
+			}
+		},
+		function (err, resp, body) {
+			that.debug('tagSearch response', err, resp, body);
+			if (err) {
+				callback(err, resp);
+				return;
+			}
+			body = JSON.parse(body);
+			if (body.code) {
+				callback('tagSearch failure', body);
+			}
+			callback(null, body.data);
+		}
+	);
+};
 
 function extend(target) {
 	for (var i = 1; i < arguments.length; i++) {
