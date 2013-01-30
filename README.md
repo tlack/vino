@@ -10,6 +10,7 @@ Features
 - Can log in to your account (but not via Twitter; you need to have set an
 	actual email and password)
 - Can fetch your home feed
+- Can find posts by tag
 - That's about it. 
 
 Example usage
