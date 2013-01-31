@@ -4,6 +4,11 @@ Vino
 Vino is a Vine.co API client written in JavaScript. It is targeted toward
 Node.js, but should be usable via the browser, CORS issues notwithstanding.
 
+This library was not authorized by the good folks over at Vine HQ. I built it
+by using the excellent Fiddler2 network monitoring software to watch what the
+official iOS client did while running on my iPad. It may not work at all for
+you, or may contain terrible bugs, or may piss off Vine.
+
 Features
 --------
 
