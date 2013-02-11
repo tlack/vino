@@ -29,7 +29,6 @@ node
 ```
 Then...
 ```javascript
-var request = require('request');
 var vino = require('./vino');
 
 client = new vino({username: 'barf@example.com', password: 'noodles2000'});
