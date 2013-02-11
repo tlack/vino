@@ -20,8 +20,18 @@ Features
 
 Example usage
 -------------
-
+Assuming you already have Node and NPM installed...
+```shell
+git clone git@github.com:tlack/vino.git
+cd vino
+npm install
+node
+```
+Then...
 ```javascript
+var request = require('request');
+var vino = require('./vino');
+
 client = new vino({username: 'barf@example.com', password: 'noodles2000'});
 client.login(function(err, key, username) {
 	
